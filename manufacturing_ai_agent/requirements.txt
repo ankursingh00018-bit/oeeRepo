@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pydantic==2.9.2
+
+# LangChain reasoning agent (langchain>=1.0's create_agent API)
+langchain>=1.0
+langchain-openai>=1.0
+langchain-anthropic>=1.0
+python-dotenv>=1.0

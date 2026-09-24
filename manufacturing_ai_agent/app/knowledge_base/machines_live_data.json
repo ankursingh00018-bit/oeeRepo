@@ -1,0 +1,123 @@
+{
+  "machines": [
+    {
+      "machine_id": "M-101",
+      "machine_type": "CNC Lathe",
+      "normal_baseline": {
+        "spindle_temperature_c": 62,
+        "vibration_mm_s": 2.1,
+        "spindle_load_pct": 58,
+        "coolant_flow_lpm": 11,
+        "reject_rate_pct": 1.3,
+        "production_rate_pct": 96,
+        "plc_alarms": []
+      },
+      "demo_abnormal_scenario": {
+        "spindle_temperature_c": 76,
+        "vibration_mm_s": 5.1,
+        "spindle_load_pct": 79,
+        "coolant_flow_lpm": 9,
+        "reject_rate_pct": 4.6,
+        "production_rate_pct": 84,
+        "plc_alarms": ["ALM-221"]
+      }
+    },
+    {
+      "machine_id": "M-102",
+      "machine_type": "CNC Milling Machine",
+      "normal_baseline": {
+        "temperature_c": 68,
+        "vibration_mm_s": 2.2,
+        "spindle_load_pct": 55,
+        "coolant_temperature_c": 24,
+        "reject_rate_pct": 1.1,
+        "production_rate_pct": 97,
+        "plc_alarms": []
+      },
+      "demo_abnormal_scenario": {
+        "temperature_c": 91,
+        "vibration_mm_s": 7.8,
+        "spindle_load_pct": 83,
+        "coolant_temperature_c": 34,
+        "reject_rate_pct": 6.4,
+        "production_rate_pct": 81,
+        "plc_alarms": ["ALM-221", "ALM-307"]
+      },
+      "demo_recovery_scenario": {
+        "temperature_c": 69,
+        "vibration_mm_s": 2.2,
+        "spindle_load_pct": 56,
+        "coolant_temperature_c": 24,
+        "reject_rate_pct": 1.1,
+        "production_rate_pct": 97,
+        "plc_alarms": []
+      }
+    },
+    {
+      "machine_id": "M-103",
+      "machine_type": "Robotic Welding Cell",
+      "normal_baseline": {
+        "joint3_servo_temperature_c": 48,
+        "joint_vibration_mm_s": 1.4,
+        "wire_feed_tension_n": 11,
+        "shielding_gas_flow_lpm": 15,
+        "weld_reject_rate_pct": 0.9,
+        "production_rate_pct": 98,
+        "plc_alarms": []
+      },
+      "demo_abnormal_scenario": {
+        "joint3_servo_temperature_c": 48,
+        "joint_vibration_mm_s": 1.6,
+        "wire_feed_tension_n": 19,
+        "shielding_gas_flow_lpm": 15,
+        "weld_reject_rate_pct": 3.9,
+        "production_rate_pct": 88,
+        "plc_alarms": ["ALM-548"]
+      }
+    },
+    {
+      "machine_id": "M-104",
+      "machine_type": "Injection Molding Machine",
+      "normal_baseline": {
+        "barrel_zone2_temperature_c": 215,
+        "hydraulic_pressure_bar": 112,
+        "cycle_time_variance_pct": 2,
+        "screw_vibration_mm_s": 1.1,
+        "reject_rate_pct": 1.6,
+        "production_rate_pct": 95,
+        "plc_alarms": []
+      },
+      "demo_abnormal_scenario": {
+        "barrel_zone2_temperature_c": 249,
+        "hydraulic_pressure_bar": 118,
+        "cycle_time_variance_pct": 14,
+        "screw_vibration_mm_s": 1.3,
+        "reject_rate_pct": 6.8,
+        "production_rate_pct": 79,
+        "plc_alarms": ["ALM-612"]
+      }
+    },
+    {
+      "machine_id": "M-105",
+      "machine_type": "Hydraulic Stamping Press",
+      "normal_baseline": {
+        "hydraulic_oil_temperature_c": 48,
+        "ram_vibration_mm_s": 2.0,
+        "hydraulic_pressure_bar": 202,
+        "die_alignment_deviation_mm": 0.05,
+        "reject_rate_pct": 1.0,
+        "production_rate_pct": 96,
+        "plc_alarms": []
+      },
+      "demo_abnormal_scenario": {
+        "hydraulic_oil_temperature_c": 55,
+        "ram_vibration_mm_s": 5.3,
+        "hydraulic_pressure_bar": 208,
+        "die_alignment_deviation_mm": 0.34,
+        "reject_rate_pct": 4.1,
+        "production_rate_pct": 85,
+        "plc_alarms": ["ALM-701", "ALM-712"]
+      }
+    }
+  ]
+}

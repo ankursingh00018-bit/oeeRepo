@@ -1,0 +1,17 @@
+incident_id,date,machine_id,machine_type,problem,observed_vibration,observed_temperature,observed_reject_rate,root_cause,action_taken,result
+INC-1001,2026-05-14,M-102,CNC Milling Machine,High vibration and temperature,6.2 mm/s,82 C,5.1%,Bearing wear,Bearing replaced,Normal
+INC-1010,2026-06-02,M-101,CNC Lathe,Dimensional variation in shaft diameter,3.8 mm/s,71 C,4.5%,Tool wear,Tool replaced,Normal
+INC-1018,2026-06-19,M-104,Injection Molding Machine,Short shots on housing parts,1.8 mm/s,196 C,6.2%,Barrel heater band failure (Zone 2),Heater band replaced,Normal
+INC-1023,2026-07-03,M-103,Robotic Welding Cell,Weld porosity increase,2.1 mm/s,58 C,4.0%,Shielding gas flow restriction,Gas line cleared and regulator replaced,Normal
+INC-1027,2026-07-21,M-102,CNC Milling Machine,Temperature rising with mild vibration,4.4 mm/s,79 C,2.6%,Lubrication degraded,Lubricated,Normal
+INC-1035,2026-07-29,M-105,Hydraulic Stamping Press,Burrs on stamped brackets,3.9 mm/s,64 C,3.9%,Die misalignment,Die realigned and re-shimmed,Normal
+INC-1041,2026-08-05,M-101,CNC Lathe,Vibration warning with no quality impact yet,3.2 mm/s,68 C,1.6%,Coolant flow reduced,Coolant line unclogged,Normal
+INC-1049,2026-08-12,M-104,Injection Molding Machine,Flash on molded parts,1.6 mm/s,231 C,5.5%,Clamp force drift,Clamp force recalibrated,Normal
+INC-1058,2026-08-30,M-102,CNC Milling Machine,Vibration warning recurrence,4.1 mm/s,80 C,3.0%,Early bearing degradation suspected,Inspection only - no replacement performed,Temporary improvement
+INC-1062,2026-08-31,M-102,CNC Milling Machine,Reject rate spike,2.9 mm/s,74 C,4.8%,Tool wear (unrelated to bearing),Tool replaced,Normal
+INC-1067,2026-09-04,M-105,Hydraulic Stamping Press,Hydraulic oil overtemperature,3.1 mm/s,74 C,2.1%,Hydraulic cooler fan failure,Cooler fan replaced,Normal
+INC-1071,2026-09-11,M-103,Robotic Welding Cell,Wire feed tension fault recurring,2.4 mm/s,61 C,3.2%,Feed roller wear,Feed rollers replaced,Normal
+INC-1074,2026-09-20,M-101,CNC Lathe,Vibration and reject rate rising together,4.7 mm/s,74 C,4.2%,Spindle bearing wear,Bearing replaced,Normal
+INC-1080,2026-10-02,M-102,CNC Milling Machine,Vibration and temperature both climbing again,5.9 mm/s,84 C,4.4%,Bearing degradation confirmed on inspection,Bearing replaced,Normal
+INC-1085,2026-10-14,M-104,Injection Molding Machine,Hydraulic pressure out of range,1.5 mm/s,225 C,3.8%,Hydraulic pump wear,Pump reseal and rebuild,Normal
+INC-1091,2026-10-27,M-105,Hydraulic Stamping Press,Die alignment deviation alarm,4.6 mm/s,66 C,3.3%,Mounting bolts loosened from vibration,Bolts retorqued and realigned,Normal
