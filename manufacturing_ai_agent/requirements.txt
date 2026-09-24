@@ -9,3 +9,4 @@ langchain-openai>=1.0
 langchain-anthropic>=1.0
 python-dotenv>=1.0
 scikit-learn
+langchain-google-genai>=2.0
