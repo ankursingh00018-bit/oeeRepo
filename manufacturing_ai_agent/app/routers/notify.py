@@ -10,6 +10,7 @@ Configure via environment variables (see .env.example):
 """
 import os
 import smtplib
+import socket
 import ssl
 from email.message import EmailMessage
 from typing import Optional, List
@@ -23,6 +24,23 @@ from .. import models
 from ..ws_manager import manager
 
 router = APIRouter(prefix="/api/notify", tags=["notify"])
+
+# --- Railway IPv6 workaround -------------------------------------------
+# Railway containers get an IPv6 address, but outbound IPv6 to most SMTP
+# hosts isn't actually routable from Railway's network. Python prefers
+# AAAA (IPv6) records when both exist, so smtplib picks IPv6 first and
+# fails with [Errno 101] Network is unreachable before ever trying IPv4.
+# Forcing getaddrinfo to IPv4-only fixes this for every socket connection
+# made from this process, including smtplib's.
+_orig_getaddrinfo = socket.getaddrinfo
+
+
+def _ipv4_only_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+    return _orig_getaddrinfo(host, port, socket.AF_INET, type, proto, flags)
+
+
+socket.getaddrinfo = _ipv4_only_getaddrinfo
+# -------------------------------------------------------------------------
 
 
 class EmailNotifyRequest(BaseModel):
@@ -135,3 +153,6 @@ def send_email(body: EmailNotifyRequest, db: Session = Depends(get_db)):
         "incident_id": body.incident_id,
         "work_order_id": body.work_order_id,
     }
+
+
+
